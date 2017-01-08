@@ -145,7 +145,9 @@ INSTALLED_APPS = (
 	'djangocms_googlemap',
 	'djangocms_video',
 	'bootstrap3',
+	'taggit',
 	'lambdaweb',
+	'news'
 )
 
 LANGUAGES = (
