@@ -1,0 +1,27 @@
+{% load cms_tags menu_tags %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% endblock styles %}
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img class="image-responsive" src="{% static 'img/lambda_logo_small.png' %}">
+            </a>
+        </div>
+        <div class="pull-right navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                {% show_menu 0 1 100 100 "menu.html" %}
+            </ul>
+        </div>
+    </div>
+</nav>
