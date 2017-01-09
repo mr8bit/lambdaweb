@@ -1,8 +1,6 @@
 /* TODO: different header backgrounds on different pages */
 body {
 	background-color           : #F2F2F2;
-	/*font-family                : "Open Sans", sans-serif;*/
-	font-weight                : 300;
 	font-size                  : 16px;
 	color                      : #555555;
 	-webkit-font-smoothing     : antialiased;
