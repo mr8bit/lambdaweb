@@ -20,8 +20,11 @@
     {#    </script>#}
 
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/indexwrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+
+    {% block styles %} {% endblock styles %}
 
     {% render_block "css" %}
 </head>
@@ -30,26 +33,22 @@
 
 {% cms_toolbar %}
 
-<div class="container">
+{#<div class="container">#}
 
-    <div id="indexwrap" class="container">
-        <row>
-            {% include 'blocks/block_navbar.html' %}
-        </row>
-        <row>
-            {% block header %} {% endblock header %}
-        </row>
-    </div>
+    {% block header %} {% endblock header %}
 
     {% block content %}{% endblock content %}
 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-{% render_block "js" %}
+{#</div>#}
 
 {% block footer %}
     {% include 'blocks/block_footer.html' %}
 {% endblock footer %}
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400&amp;subset=cyrillic" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+{% render_block "js" %}
+
 </body>
 </html>
