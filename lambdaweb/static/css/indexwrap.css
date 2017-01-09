@@ -10,7 +10,7 @@ body {
 }
 
 #indexwrap {
-background              : url('img/about-bg.jpg') no-repeat center top;
+background              : url('/static/img/about-bg.jpg') no-repeat center top;
 /*margin-top: -10px;*/
 /*padding-top: 20px;*/
 text-align              : center;
