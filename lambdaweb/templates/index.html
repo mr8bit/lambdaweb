@@ -67,7 +67,12 @@
 
 {% block content %}
     <div>
-        {% placeholder "quote" %}
+        {% static_placeholder "quote" or %}
+            <blockquote class="blockquote-reverse">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+        {% endstatic_placeholder %}
     </div>
     <div>
         {% placeholder "courses" %}
