@@ -147,7 +147,16 @@ INSTALLED_APPS = (
 	'bootstrap3',
 	'taggit',
 	'lambdaweb',
-	'news'
+	'aldryn_apphooks_config',
+	'aldryn_categories',
+	'aldryn_common',
+	'aldryn_newsblog',
+	'aldryn_people',
+	'aldryn_reversion',
+	'aldryn_translation_tools',
+	'parler',
+	'sortedm2m',
+	'reversion'
 )
 
 LANGUAGES = (
@@ -178,6 +187,7 @@ CMS_TEMPLATES = (
 	# ('page.html', 'Page'),
 	# ('feature.html', 'Page with Feature')
 	('index.html', gettext('Homepage')),
+	('news.html', gettext('News')),
 )
 
 CMS_PERMISSION = True
@@ -202,7 +212,9 @@ MIGRATION_MODULES = {
 
 THUMBNAIL_PROCESSORS = (
 	'easy_thumbnails.processors.colorspace',
-	'easy_thumbnails.processors.autocrop',
-	'filer.thumbnail_processors.scale_and_crop_with_subject_location',
-	'easy_thumbnails.processors.filters'
+    'easy_thumbnails.processors.autocrop',
+    # 'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+    'easy_thumbnails.processors.background',
 )
