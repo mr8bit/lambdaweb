@@ -1,0 +1,23 @@
+#news_logo {
+    background: #44C2FF;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    min-height: 300px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#news_logo .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+#news_logo h2 {
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 80px;
+}

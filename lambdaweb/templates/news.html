@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load cms_tags %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock styles %}
+
+{% block title %}
+    Новости
+{% endblock title %}
+
+{% block header %}
+    <div id="news_logo" class="container">
+        <row>
+            {% include 'blocks/block_navbar.html' %}
+        </row>
+        <row>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2>Новости</h2>
+            </div>
+        </row>
+    </div>
+{% endblock header %}
+
+{% block content %}
+{#{% placeholder "Newsblog_Article_Content " %}#}
+{% endblock content %}
